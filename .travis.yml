@@ -1,0 +1,25 @@
+language: node_js
+cache:
+  directories:
+    - node_modules
+    - ~/.npm
+node_js:
+  - "12"
+git:
+  depth: 3
+scripts:
+  - yarn test
+notifications:
+  email:
+    recipients:
+      - sergio4brandon@gmail.com
+    on_success: always
+    on_failure: always
+deploy:
+  provider: heroku
+  skin_cleanup: true
+  keep-history: true
+  api_key: 44a71b4f-f07b-489c-b72e-6521033a04ea
+  app: platzi-store-backend1729
+  on:
+    repo: sergio99778/platzi-store-backend
