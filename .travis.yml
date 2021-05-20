@@ -15,11 +15,9 @@ script:
   - yarn test
 
 notifications:
-  slack: workspace:token
   email:
     recipients:
-      - oscar@platzi.com
-      - oscar@arepa.dev
+      - sergio4brandon@gmail.com
     on_success: always
     on_failure: always
 
@@ -27,7 +25,7 @@ deploy:
   provide: heroku
   skip-cleanup: true
   keep-history: true
-  api_key: apiKey # desde heroku
-  app: platzi-store-backend
+  api_key: 44a71b4f-f07b-489c-b72e-6521033a04ea # desde heroku
+  app: platzi-store-backend1729
   on:
-    repo: danibarria/platzi-store-backend
+    repo: sergio99778/platzi-store-backend
